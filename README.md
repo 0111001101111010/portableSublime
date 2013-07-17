@@ -12,7 +12,11 @@ sublime text 2 found here http://www.sublimetext.com/2
 
 Packages used:
 +package manager
+
 +sftp
+
 +jslint
+
 +html5
+
 +git
