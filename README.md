@@ -14,9 +14,6 @@ Packages used:
 +package manager
 
 +sftp
-
 +jslint
-
 +html5
-
 +git
