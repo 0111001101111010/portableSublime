@@ -17,20 +17,32 @@
 			},
 			"buffers":
 			[
+				{
+					"contents": "// partial_sort() implementation for std::list<int> based on suggestion\n// by Scott Meyers in Effective STL, item 31.\n//\n// See <http://stackoverflow.com/questions/9220750>.\n \n#include <cstddef>\n#include <list>\n#include <iostream>\n#include <set>\n \n// Perdicate for sorting iterators based on their item's value.\nstruct iterator_less\n{   \n    bool operator() (std::list<int>::iterator lhs,\n                     std::list<int>::iterator rhs) const\n    {\n        return (*lhs < *rhs);\n    }\n};\n \n// Sorted container (with duplicates) that sorts iterators\n// based on their item's value (see 'iterator_less').\ntypedef std::multiset<\n        std::list<int>::iterator, iterator_less\n    > iterator_set;\n \nvoid partial_sort(std::list<int>& items, std::size_t n)\n{\n    // Build a set of iterators to the items, sorting\n    // the them based on their item's value.\n    iterator_set sorted;\n    for (auto item = items.begin(); item!=items.end(); ++item)\n    {\n        // This is actually inserting an iterator that points\n        // to the item rather than copying the item's value.\n        sorted.insert(item);\n    }\n \n    // Move up to 'n' items from the sorted set to the\n    // front of the list by \"splicing\" them at successive\n    // positions starting with the smallest.\n    auto position = items.begin();\n    auto item = sorted.begin();\n    for (std::size_t i=0; i<n && item!=sorted.end(); ++i)\n    {\n        // Move the next item into the ith position.\n        items.splice(position, items, *item);\n \n        // Move 'position' to the (i+1)th position\n        // in the list for the next iteration, and\n        // move 'next' to the (i+1)th smallest item.\n        position = *item, ++position, ++item;\n    }\n}\n \nint main ()\n{\n    std::list<int> items;\n    items.push_back(11);\n    items.push_back(2);\n    items.push_back(3);\n    items.push_back(99);\n    items.push_back(1);\n    items.push_back(4);\n    items.push_back(5);\n    items.push_back(7);\n    items.push_back(34);\n \n    partial_sort(items, 3);\n \n    for (auto item=items.begin(); item!=items.end(); ++item)\n    {\n        std::cout << *item << std::endl;\n    }\n}// partial_sort() implementation for std::list<int> based on suggestion\n// by Scott Meyers in Effective STL, item 31.\n//\n// See <http://stackoverflow.com/questions/9220750>.\n \n#include <cstddef>\n#include <list>\n#include <iostream>\n#include <set>\n \n// Perdicate for sorting iterators based on their item's value.\nstruct iterator_less\n{   \n    bool operator() (std::list<int>::iterator lhs,\n                     std::list<int>::iterator rhs) const\n    {\n        return (*lhs < *rhs);\n    }\n};\n \n// Sorted container (with duplicates) that sorts iterators\n// based on their item's value (see 'iterator_less').\ntypedef std::multiset<\n        std::list<int>::iterator, iterator_less\n    > iterator_set;\n \nvoid partial_sort(std::list<int>& items, std::size_t n)\n{\n    // Build a set of iterators to the items, sorting\n    // the them based on their item's value.\n    iterator_set sorted;\n    for (auto item = items.begin(); item!=items.end(); ++item)\n    {\n\n        \n        // This is actually inserting an iterator that points\n        // to the item rather than copying the item's value.\n        sorted.insert(item);\n    }\n \n    // Move up to 'n' items from the sorted set to the\n    // front of the list by \"splicing\" them at successive\n    // positions starting with the smallest.\n    auto position = items.begin();\n    auto item = sorted.begin();\n    for (std::size_t i=0; i<n && item!=sorted.end(); ++i)\n    {\n        // Move the next item into the ith position.\n        items.splice(position, items, *item);\n \n        // Move 'position' to the (i+1)th position\n        // in the list for the next iteration, and\n        // move 'next' to the (i+1)th smallest item.\n        position = *item, ++position, ++item;\n    }\n}\n \nint main ()\n{\n    std::list<int> items;\n    items.push_back(11);\n    items.push_back(2);\n    items.push_back(3);\n    items.push_back(99);\n    items.push_back(1);\n    items.push_back(4);\n    items.push_back(5);\n    items.push_back(7);\n    items.push_back(34);\n \n    partial_sort(items, 3);\n \n    for (auto item=items.begin(); item!=items.end(); ++item)\n    {\n        std::cout << *item << std::endl;\n    }\n}",
+					"file": "/F/Projects/bookexercises/Samples/lists.cpp",
+					"file_size": 4382,
+					"file_write_time": 130188198660000000,
+					"settings":
+					{
+						"buffer_size": 4244,
+						"line_ending": "Windows",
+						"name": "// partial_sort() implementation for std::list<int"
+					}
+				}
 			],
-			"build_system": "",
+			"build_system": "Packages/C++/C++.sublime-build",
 			"command_palette":
 			{
-				"height": 81.0,
+				"height": 58.0,
 				"selected_items":
 				[
 					[
-						"snippe",
-						"Snippet: Lorem ipsum"
-					],
-					[
 						"install",
 						"Package Control: Install Package"
+					],
+					[
+						"snippe",
+						"Snippet: Lorem ipsum"
 					],
 					[
 						"package install",
@@ -88,8 +100,41 @@
 			"groups":
 			[
 				{
+					"selected": 0,
 					"sheets":
 					[
+						{
+							"buffer": 0,
+							"file": "/F/Projects/bookexercises/Samples/lists.cpp",
+							"settings":
+							{
+								"buffer_size": 4244,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										2873,
+										2873
+									]
+								],
+								"settings":
+								{
+									"auto_name": "// partial_sort() implementation for std::list<int",
+									"incomplete_sync": null,
+									"remote_loading": false,
+									"synced": false,
+									"syntax": "Packages/C++/C++.tmLanguage",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 3623.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						}
 					]
 				}
 			],
@@ -124,11 +169,15 @@
 				]
 			},
 			"menu_visible": true,
+			"output.exec":
+			{
+				"height": 100.0
+			},
 			"output.sftp":
 			{
 				"height": 0.0
 			},
-			"position": "0,2,3,-1,-1,-1,-1,795,558,257,1214",
+			"position": "0,2,3,-1,-1,-1,-1,815,2478,277,3134",
 			"replace":
 			{
 				"height": 0.0

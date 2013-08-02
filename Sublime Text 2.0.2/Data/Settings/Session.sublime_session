@@ -17,15 +17,44 @@
 			},
 			"buffers":
 			[
+				{
+					"file": "/F/Projects/bookexercises/Samples/lists.cpp",
+					"settings":
+					{
+						"buffer_size": 4234,
+						"line_ending": "Windows",
+						"name": "// partial_sort() implementation for std::list<int"
+					}
+				},
+				{
+					"contents": "HEY DIS IS A QUEST LOG\n\nCANCEL UTILITIES\n1. POWER\n2. ELECTRICITY \n3. CABLE\n\nFORWARD MAIL.\n4. MAIL FORWARD\n4a. CALL ABOUT YOUR MEDICAL THING IM SERIOUS\n\n5. FUCK THE LAND LADY\n\n6. TO GET IN MY HOUSE\n\nGO TO THE BACK. \n\nENTER THE CODE 0928 INTO THE PAD\n\nHIT ENTER TWICE.\n\nTHANKS WAP WAP",
+					"settings":
+					{
+						"buffer_size": 282,
+						"line_ending": "Windows"
+					}
+				}
 			],
-			"build_system": "",
+			"build_system": "Packages/C++/C++.sublime-build",
 			"command_palette":
 			{
-				"height": 0.0,
+				"height": 81.0,
 				"selected_items":
 				[
+					[
+						"snippe",
+						"Snippet: Lorem ipsum"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"package install",
+						"Package Control: Install Package"
+					]
 				],
-				"width": 0.0
+				"width": 400.0
 			},
 			"console":
 			{
@@ -76,8 +105,69 @@
 			"groups":
 			[
 				{
+					"selected": 1,
 					"sheets":
 					[
+						{
+							"buffer": 0,
+							"file": "/F/Projects/bookexercises/Samples/lists.cpp",
+							"settings":
+							{
+								"buffer_size": 4234,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										3771,
+										3771
+									]
+								],
+								"settings":
+								{
+									"auto_name": "// partial_sort() implementation for std::list<int",
+									"incomplete_sync": null,
+									"remote_loading": false,
+									"synced": false,
+									"syntax": "Packages/C++/C++.tmLanguage",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 1292.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"settings":
+							{
+								"buffer_size": 282,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										174,
+										174
+									]
+								],
+								"settings":
+								{
+									"incomplete_sync": null,
+									"remote_loading": false,
+									"synced": false,
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						}
 					]
 				}
 			],
@@ -112,7 +202,15 @@
 				]
 			},
 			"menu_visible": true,
-			"position": "0,2,3,-1,-1,-1,-1,795,558,257,1214",
+			"output.exec":
+			{
+				"height": 100.0
+			},
+			"output.sftp":
+			{
+				"height": 0.0
+			},
+			"position": "0,2,3,-32000,-32000,-1,-1,815,2478,277,3134",
 			"replace":
 			{
 				"height": 0.0

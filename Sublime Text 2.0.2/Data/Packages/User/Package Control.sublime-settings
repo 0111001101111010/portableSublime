@@ -1,9 +1,13 @@
 {
+	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
 		"HTML5",
 		"JSLint",
+		"Package Control",
 		"SFTP",
-		"Six - Future JavaScript Syntax"
+		"SideBarEnhancements",
+		"Six - Future JavaScript Syntax",
+		"SnippetMaker"
 	]
 }
